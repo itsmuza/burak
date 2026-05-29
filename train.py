@@ -1,12 +1,20 @@
+# task - N
+def palindromCheck(data):
+    return data == data[::-1]
+
+
+print(palindromCheck("dadadad"))
+
+
 # task - M
-def getSquareNumbers(data):
-    result = []
-    for n in data:
-        result.append({"number": n, "square": n**2})
-    return result
+# def getSquareNumbers(data):
+#     result = []
+#     for n in data:
+#         result.append({"number": n, "square": n**2})
+#     return result
 
 
-print(getSquareNumbers([1, 2, 3]))
+# print(getSquareNumbers([1, 2, 3]))
 
 
 # task - L

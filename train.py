@@ -1,9 +1,21 @@
+# task - O
+def calculateSumOfNumbers(data):
+    sum = 0
+    for i in data:
+        if isinstance(i, int) and not isinstance(i, bool):
+            sum += i
+    return sum
+
+
+print(calculateSumOfNumbers([10, "10", {"son": 10}, True, 35, False]))
+
+
 # task - N
-def palindromCheck(data):
-    return data == data[::-1]
+# def palindromCheck(data):
+#     return data == data[::-1]
 
 
-print(palindromCheck("dadadad"))
+# print(palindromCheck("dadadad"))
 
 
 # task - M

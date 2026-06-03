@@ -1,13 +1,26 @@
+# task - P
+def objectToArray(data):
+    result = []
+    for key, value in data.items():
+        result.append([key, value])
+    return result
+
+print(objectToArray({"a": 10, "b": 20}))
+
+
+
+
+
 # task - O
-def calculateSumOfNumbers(data):
-    sum = 0
-    for i in data:
-        if isinstance(i, int) and not isinstance(i, bool):
-            sum += i
-    return sum
+# def calculateSumOfNumbers(data):
+#     sum = 0
+#     for i in data:
+#         if isinstance(i, int) and not isinstance(i, bool):
+#             sum += i
+#     return sum
 
 
-print(calculateSumOfNumbers([10, "10", {"son": 10}, True, 35, False]))
+# print(calculateSumOfNumbers([10, "10", {"son": 10}, True, 35, False]))
 
 
 # task - N

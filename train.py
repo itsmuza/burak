@@ -1,11 +1,19 @@
-# task - P
-def objectToArray(data):
-    result = []
-    for key, value in data.items():
-        result.append([key, value])
-    return result
+# task - Q
+def hasProperty(obj, str):
+    return True if str in obj else False
+print(hasProperty({"name": "BMW"}, "name"))
 
-print(objectToArray({"a": 10, "b": 20}))
+
+
+
+# task - P
+# def objectToArray(data):
+#     result = []
+#     for key, value in data.items():
+#         result.append([key, value])
+#     return result
+
+# print(objectToArray({"a": 10, "b": 20}))
 
 
 

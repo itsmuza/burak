@@ -1,3 +1,6 @@
+import { Session } from "express-session";
+import { Request } from "express";
+import MemberService from "../../models/Member.service";
 import { MemberStatus, MemberType } from "../enums/member.enum";
 
 export interface Member {
@@ -12,7 +15,7 @@ export interface Member {
   memberImage?: string;
   memberPoints: number;
   createdAt: Date;
-  updatedUp: "Date";
+  updatedUp: Date;
 }
 
 export interface MemberInput {
@@ -26,10 +29,15 @@ export interface MemberInput {
   memberImage?: string;
   memberPoints: number;
   createdAt: Date;
-  updatedUp: "Date";
+  updatedUp: Date;
 }
 
 export interface LoginInput {
   memberNick: string;
   memberPassword: string;
+}
+
+export interface AdminRequest extends Request {
+  member: Member;
+  session: Session & { member: Member };
 }

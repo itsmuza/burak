@@ -1,7 +1,20 @@
+# task - R
+def calculate(data):
+    sum = 0
+    args = data.split("+")
+    for n in args:
+        sum += int(n)
+    return sum
+
+print(calculate("1 + 2 + 10 + 11"))
+
+
+
+
 # task - Q
-def hasProperty(obj, str):
-    return True if str in obj else False
-print(hasProperty({"name": "BMW"}, "name"))
+# def hasProperty(obj, str):
+#     return True if str in obj else False
+# print(hasProperty({"name": "BMW"}, "name"))
 
 
 

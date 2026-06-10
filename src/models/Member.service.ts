@@ -11,7 +11,7 @@ class MemberService {
     this.memberModel = MemberModel;
   }
 
-  /** SPA */
+  //* SPA
   public async signup(input: MemberInput): Promise<Member> {
     const salt = await bcrypt.genSalt();
     input.memberPassword = await bcrypt.hash(input.memberPassword, salt);
@@ -49,7 +49,7 @@ class MemberService {
     return await this.memberModel.findById(member._id).lean().exec();
   }
 
-  /** SSR */
+  //* SSR
   public async processSignup(input: MemberInput): Promise<Member> {
     const exist = await this.memberModel
       .findOne({ memberType: MemberType.RESTAURANT })

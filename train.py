@@ -1,12 +1,26 @@
-# task - R
-def calculate(data):
-    sum = 0
-    args = data.split("+")
-    for n in args:
-        sum += int(n)
-    return sum
+# task - S
+def missingNumber(data):
+    max1 = max(data)
+    min1 = min(data)
+    for n in range(min1+1, max1):
+        if n not in data:
+            return n
 
-print(calculate("1 + 2 + 10 + 11"))
+
+print(missingNumber([3,0,1]))
+
+
+
+
+# task - R
+# def calculate(data):
+#     sum = 0
+#     args = data.split("+")
+#     for n in args:
+#         sum += int(n)
+#     return sum
+
+# print(calculate("1 + 2 + 10 + 11"))
 
 
 

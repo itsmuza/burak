@@ -1,4 +1,4 @@
-import { Request, Response } from "express";
+import { NextFunction, Request, Response } from "express";
 import { T } from "../libs/types/common";
 import MemberService from "../models/Member.service";
 import { AdminRequest, LoginInput, MemberInput } from "../libs/types/member";
@@ -108,6 +108,22 @@ restaurantController.checkAuthSession = async (
   } catch (err) {
     console.log("Error, processLogin:", err);
     res.send(err);
+  }
+};
+
+//~ Middleware
+restaurantController.verifyRestaurant = (
+  req: AdminRequest,
+  res: Response,
+  next: NextFunction,
+) => {
+  if (req.session?.member?.memberType === MemberType.RESTAURANT) {
+    req.member = req.session.member;
+    next();
+  } else {
+    res.send(
+      `<script> alert("${Message.NOT_AUTHENTICATED}"); window.location.replace('/admin/login'); </script>`,
+    );
   }
 };
 

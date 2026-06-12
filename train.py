@@ -1,12 +1,22 @@
-# task - S
-def missingNumber(data):
-    max1 = max(data)
-    min1 = min(data)
-    for n in range(min1+1, max1):
-        if n not in data:
-            return n
+# task T
+def mergeSortedArrays(arr1, arr2):
+    for n in arr1:
+        arr2.append(n)
+    return sorted(arr2)
 
-print(missingNumber([3,0,1]))
+print(mergeSortedArrays([0, 3, 4], [4, 6]))
+
+
+
+# task - S
+# def missingNumber(data):
+#     max1 = max(data)
+#     min1 = min(data)
+#     for n in range(min1+1, max1):
+#         if n not in data:
+#             return n
+
+# print(missingNumber([3,0,1]))
 
 
 

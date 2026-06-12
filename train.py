@@ -6,7 +6,6 @@ def missingNumber(data):
         if n not in data:
             return n
 
-
 print(missingNumber([3,0,1]))
 
 

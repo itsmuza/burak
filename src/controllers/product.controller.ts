@@ -16,8 +16,9 @@ const productController: T = {};
 //* SSR
 productController.getAllProduct = async (req: AdminRequest, res: Response) => {
   try {
-    console.log("getAllProduct");
-    res.render("products");
+    const result = await productService.getAllProducts();
+    // console.log("data:", result);
+    res.render("products", { products: result });
   } catch (err) {
     if (err instanceof Errors) res.status(err.code).json(err);
     else res.status(Errors.standard.code).json(Errors.standard);

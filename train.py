@@ -1,10 +1,22 @@
-# task T
-def mergeSortedArrays(arr1, arr2):
-    for n in arr1:
-        arr2.append(n)
-    return sorted(arr2)
+# task V
+def countChars(data):
+    obj={}
+    for key in data:
+        if(key in obj): obj[key] += 1
+        else: obj[key]=1
+    return obj
+print(countChars("hello"))
 
-print(mergeSortedArrays([0, 3, 4], [4, 6]))
+
+
+
+# task T
+# def mergeSortedArrays(arr1, arr2):
+#     for n in arr1:
+#         arr2.append(n)
+#     return sorted(arr2)
+
+# print(mergeSortedArrays([0, 3, 4], [4, 6]))
 
 
 

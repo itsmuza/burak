@@ -1,11 +1,26 @@
+# task W
+def chunkArray(arr, chunk):
+    result_arr = []
+
+    for i in range(0, len(arr), chunk):
+        temp_arr = []
+        for j in range(chunk):
+            if(i+j < len(arr)):
+                temp_arr.append(arr[i+j])
+        result_arr.append(temp_arr)
+    return result_arr
+   
+print(chunkArray([1, 2, 3, 4, 5,10], 3))
+
+
 # task V
-def countChars(data):
-    obj={}
-    for key in data:
-        if(key in obj): obj[key] += 1
-        else: obj[key]=1
-    return obj
-print(countChars("hello"))
+# def countChars(data):
+#     obj={}
+#     for key in data:
+#         if(key in obj): obj[key] += 1
+#         else: obj[key]=1
+#     return obj
+# print(countChars("hello"))
 
 
 

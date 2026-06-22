@@ -19,6 +19,7 @@ export enum Message {
   USED_NICK_PHONE = "You a re inserting already used nick or phone!",
   WRONG_PASSWORD = "Wrong password intered, please try again!",
   NOT_AUTHENTICATED = "You are not authenticated, please login first!",
+  BLOCKED_USER = "You have been blocked, contact admin!",
 }
 class Errors extends Error {
   public code: HttpCode;

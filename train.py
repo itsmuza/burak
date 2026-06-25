@@ -1,16 +1,30 @@
-# task W
-def chunkArray(arr, chunk):
-    result_arr = []
+# task X
+def countOccurrences(data, check):
+    count=0
+    for key,value in data.items():
+        if(key == check): count+=1
+        if type(value) == dict:
+            for key1, value1 in value.items():
+                if key1 == check: count+=1
+    print(count)
 
-    for i in range(0, len(arr), chunk):
-        temp_arr = []
-        for j in range(chunk):
-            if(i+j < len(arr)):
-                temp_arr.append(arr[i+j])
-        result_arr.append(temp_arr)
-    return result_arr
+countOccurrences({"model": "A", "s": {"model": "B"}}, "model")
+
+
+
+# task W
+# def chunkArray(arr, chunk):
+#     result_arr = []
+
+#     for i in range(0, len(arr), chunk):
+#         temp_arr = []
+#         for j in range(chunk):
+#             if(i+j < len(arr)):
+#                 temp_arr.append(arr[i+j])
+#         result_arr.append(temp_arr)
+#     return result_arr
    
-print(chunkArray([1, 2, 3, 4, 5,10], 3))
+# print(chunkArray([1, 2, 3, 4, 5,10], 3))
 
 
 # task V

@@ -1,14 +1,24 @@
-# task X
-def countOccurrences(data, check):
-    count=0
-    for key,value in data.items():
-        if(key == check): count+=1
-        if type(value) == dict:
-            for key1, value1 in value.items():
-                if key1 == check: count+=1
-    print(count)
+# task Y
+def findIntersection(arr1, arr2):
+    result = []
+    for n in arr1:
+        if n in arr2: result.append(n)
+    print(result)
 
-countOccurrences({"model": "A", "s": {"model": "B"}}, "model")
+findIntersection([1, 2, 3], [3, 2, 0])
+
+
+# task X
+# def countOccurrences(data, check):
+#     count=0
+#     for key,value in data.items():
+#         if(key == check): count+=1
+#         if type(value) == dict:
+#             for key1, value1 in value.items():
+#                 if key1 == check: count+=1
+#     print(count)
+
+# countOccurrences({"model": "A", "s": {"model": "B"}}, "model")
 
 
 

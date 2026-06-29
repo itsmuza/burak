@@ -1,11 +1,25 @@
-# task Y
-def findIntersection(arr1, arr2):
-    result = []
-    for n in arr1:
-        if n in arr2: result.append(n)
-    print(result)
+# Task Z
+def sumEvens(arr):
+    sum=0
+    for n in arr:
+        if(n%2==0): sum+=n
+    return sum
 
-findIntersection([1, 2, 3], [3, 2, 0])
+print(sumEvens([1, 2, 3, 4]))
+
+
+
+
+# task Y
+# def findIntersection(arr1, arr2):
+#     result = []
+#     for n in arr1:
+#         if n in arr2: result.append(n)
+#     print(result)
+
+# findIntersection([1, 2, 3], [3, 2, 0])
+
+
 
 
 # task X

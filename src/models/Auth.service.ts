@@ -4,13 +4,16 @@ import { Member } from "../libs/types/member";
 import jwt from "jsonwebtoken";
 
 class AuthService {
-  constructor() {}
+  private readonly secretToken;
+  constructor() {
+    this.secretToken = process.env.SECRET_TOKEN as string;
+  }
   public createToken(payload: Member) {
     return new Promise((resolve, reject) => {
       const duration = `${AUTH_TIMER}h`;
       jwt.sign(
         payload,
-        process.env.SECRET_TOKEN as string,
+        this.secretToken,
         { expiresIn: duration },
         function (err, token) {
           if (err) {
@@ -21,6 +24,15 @@ class AuthService {
         },
       );
     });
+  }
+
+  public async checkAuth(token: string): Promise<Member> {
+    const result: Member = (await jwt.verify(
+      token,
+      this.secretToken,
+    )) as Member;
+    console.log("memberNick:", result.memberNick);
+    return result;
   }
 }
 

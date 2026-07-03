@@ -20,6 +20,7 @@ export enum Message {
   WRONG_PASSWORD = "Wrong password intered, please try again!",
   NOT_AUTHENTICATED = "You are not authenticated, please login first!",
   BLOCKED_USER = "You have been blocked, contact admin!",
+  TOKEN_CREATING_FAILED = "Token creating error!",
 }
 class Errors extends Error {
   public code: HttpCode;
